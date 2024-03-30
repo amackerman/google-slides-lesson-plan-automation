@@ -63,9 +63,11 @@ Once you have downloaded or cloned the script, the next step is to add it to Goo
   - Define placeholders for dynamic content. The example also has a section slide for each period that is taught. These are in the same order as the rows of lesson plan notes and are where the lesson plan notes are inserted.
   - The name of the variable needs to be enclosed in **double** curly braces {{}} wherever you want them inserted.
 
+![A Google slide that shows a variable in curly double curly brackets](images/Slide_Template_with_variables.png "Template with Variables")
+
 2. **Google Sheets Preparation**: Set up a Google Sheet with two tabs: "Slide Content" for slide content variables and "Weekly Notes" for speaker notes. You can get a copy of my template [here](https://docs.google.com/spreadsheets/d/1jv21YTvJ6EkmovBMOI8bTLbIoQFbJV-zOEWQog4cbaE/copy)
 
-   ![A Google sheet that lists variables and values to enter into a presentation](/images/Template_Variables_Image.png "Template Variables")
+![A Google sheet that lists variables and values to enter into a presentation](/images/Template_Variables_Image.png "Template Variables")
    
   - The first column of "Slide Content" should contain your variables in **double** curly braces. The following comments are the values for those variables. If they are different each day of the week, you can have a column for each day.
 
@@ -75,7 +77,7 @@ This code will call the values for Monday.
 
 - Weekly notes is a custom lesson plan format. It has three columns per day. Therefore, the value for where the code finds the notes changes depending on the day.
 
-- ![A Google Sheet filled in with lesson plan information](/images/Weekly_Notes_Image.png "Screenshot Lesson Plan in Google Sheets")
+  ![A Google Sheet filled in with lesson plan information](/images/Weekly_Notes_Image.png "Screenshot Lesson Plan in Google Sheets")
 -  If you need more or fewer columns, you will need to adjust your values accordingly. I keep them in a comment for easy reference.
 
 This code will insert the speaker notes for Monday.
@@ -133,7 +135,15 @@ Once the script is authorized and ready to go, you can proceed to using it as de
 ## Customization
 
 - You can add notes for as many classes/subjects as you would like; just make sure there is a corresponding slide in the template.
-- You can apply a theme to your template as usual, which will apply to any created presentations. The screenshots have a theme, but the template link does not, so it is more customizable. 
+- You can apply a theme to your template as usual, which will apply to any created presentations. The screenshots have a theme, but the template link does not, so it is more customizable.
+- 
+  The created title slide:
+
+ ![A plain Google slide that says Monday, January 22, 2024](/images/Created_slide.png "Screenshot of a plain Google slide")
+ 
+  The same slide with a Google Slides Theme applied.
+
+![A Google slide that says Monday, January 22, 2024 with a theme](/images/Created_slide_with_theme.png "Screenshot of a themed Google slide")
 
 ## Troubleshooting
 - Double-check that IDs match for `TEMPLATE_ID`, `TARGET_FOLDER_ID`, and `spreadsheetID`, as well as the names of the tabs on the spreadsheets.
