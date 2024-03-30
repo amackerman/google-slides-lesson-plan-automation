@@ -62,22 +62,25 @@ Once you have downloaded or cloned the script, the next step is to add it to Goo
 ).
   - Define placeholders for dynamic content. The example also has a section slide for each period that is taught. These are in the same order as the rows of lesson plan notes and are where the lesson plan notes are inserted.
   - The name of the variable needs to be enclosed in **double** curly braces {{}} wherever you want them inserted.
-		[screen capture]
+
 2. **Google Sheets Preparation**: Set up a Google Sheet with two tabs: "Slide Content" for slide content variables and "Weekly Notes" for speaker notes. You can get a copy of my template [here](https://docs.google.com/spreadsheets/d/1jv21YTvJ6EkmovBMOI8bTLbIoQFbJV-zOEWQog4cbaE/copy)
+
+   ![A Google sheet that lists variables and values to enter into a presentation](/images/Template_Variables_Image.png "Template Variables")
+   
   - The first column of "Slide Content" should contain your variables in **double** curly braces. The following comments are the values for those variables. If they are different each day of the week, you can have a column for each day.
-[Screenshot]
 
 This code will call the values for Monday.
 
 ```var templateValue = row[1]; // Assumes values are in the second column```
 
-- Weekly notes is a custom lesson plan format. It has three columns per day. Therefore, the value for where the code finds the notes changes depending on the day. If you need more or fewer columns you will need to adjust your valuses accordingly. I keep them in a comment for easy reference.
+- Weekly notes is a custom lesson plan format. It has three columns per day. Therefore, the value for where the code finds the notes changes depending on the day.
+
+- ![A Google Sheet filled in with lesson plan information](/images/Weekly_Notes_Image.png "Screenshot Lesson Plan in Google Sheets")
+-  If you need more or fewer columns, you will need to adjust your values accordingly. I keep them in a comment for easy reference.
 
 This code will insert the speaker notes for Monday.
 
 ```addSpeakerNotesToSlides(newPresentation, spreadsheetId, "Weekly Notes", 2);//(Values are 2,5,8,11,14)```
-
-[Screenshot]
 
 3. **Script Configuration**: 
 - In your script, set the `TEMPLATE_ID` to the ID of your Google Slides template and `TARGET_FOLDER_ID` to the ID of the folder where new presentations will be saved.
@@ -126,8 +129,6 @@ Once the script is authorized and ready to go, you can proceed to using it as de
 ## Usage
 - Adjust the values to correspond with your columns for the day.
 - Save the changes to the sheet and click run.
-
-    **Note:** The first time you click `run,` Google will ask you if you trust the script. You must click `Allow` for the script to work. 
 
 ## Customization
 
